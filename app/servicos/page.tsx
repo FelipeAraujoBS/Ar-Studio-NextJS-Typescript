@@ -1,5 +1,6 @@
 import { HeroServices } from "@/components/services/HeroServices";
 import { ServicesOverview } from "@/components/services/ServicesOverview";
+import { CTAFinal } from "@/components/services/CTAFinal";
 
 export const metadata = {
   title: "Serviços - A Group | Seu hub de soluções tecnológicas",
@@ -12,6 +13,7 @@ export default function ServicesPage() {
     <main>
       <HeroServices />
       <ServicesOverview />
+      <CTAFinal />
     </main>
   );
 }

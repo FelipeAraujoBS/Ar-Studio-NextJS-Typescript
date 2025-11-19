@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Container } from "../shared/Container";
 import { ThemeToggle } from "../shared/ThemeToggle";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -16,6 +17,8 @@ const navItems = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,16 +53,24 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="relative px-4 py-2 text-sm font-medium transition-colors group text-neutral-dark dark:text-gray-300"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-primary-blue" />
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="relative px-4 py-2 text-sm font-medium transition-colors group text-neutral-dark dark:text-gray-300"
+                >
+                  {item.label}
+                  <span
+                    className={`absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 bg-primary-blue ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </nav>
 
           {/* CTA Button Desktop */}

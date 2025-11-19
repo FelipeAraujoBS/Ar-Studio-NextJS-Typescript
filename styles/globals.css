@@ -103,6 +103,26 @@
   border-color: var(--color-dark-border);
 }
 
+@layer components {
+  .contactform-scope label {
+    @apply text-gray-700 dark:text-white;
+  }
+  .contactform-scope h2 {
+    @apply text-gray-800 dark:text-white;
+  }
+  .contactform-scope p {
+    @apply text-gray-600 dark:text-white;
+  }
+  .contactform-scope button {
+    @apply bg-blue-600 dark:bg-accent-cyan;
+  }
+  .contactform-scope input,
+  .contactform-scope textarea,
+  .contactform-scope select {
+    @apply text-gray-600 dark:text-[#E2DFD2];
+  }
+}
+
 @layer base {
   body {
     font-family: "Inter", sans-serif;

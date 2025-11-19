@@ -73,7 +73,7 @@ export function Testimonials() {
   );
 
   return (
-    <Section className="bg-white dark:bg-dark-bg overflow-hidden">
+    <Section className="bg-white dark:bg-dark-bg overflow-hidden -mt-20">
       <Container>
         {/* Header */}
         <div className="text-center mb-16">

@@ -27,7 +27,7 @@ const services = [
     description:
       "Presença digital profissional com design moderno, responsivo e otimizado para SEO.",
     features: ["Design Responsivo", "SEO Otimizado", "Performance"],
-    color: "from-blue-500 to-blue-600",
+    color: "from-orange-500 to-orange-600",
   },
   {
     id: "ecommerce",
@@ -50,7 +50,7 @@ const services = [
     description:
       "Lojas virtuais completas e integradas com meios de pagamento, gestão de produtos e muito mais.",
     features: ["Pagamentos", "Gestão", "Integração"],
-    color: "from-cyan-500 to-cyan-600",
+    color: "from-blue-500 to-blue-600",
   },
   {
     id: "sistemas",
