@@ -8,7 +8,7 @@ interface FormData {
   nome: string;
   email: string;
   telefone: string;
-  curso: string;
+  servico: string;
   mensagem: string;
 }
 
@@ -20,7 +20,7 @@ export function ContactForm() {
   const [nome, setNome] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [telefone, setTelefone] = useState<string>("");
-  const [curso, setCurso] = useState<string>("");
+  const [servico, setServico] = useState<string>("");
   const [mensagem, setMensagem] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
@@ -33,7 +33,7 @@ export function ContactForm() {
       nome,
       email,
       telefone,
-      curso,
+      servico,
       mensagem,
     };
 
@@ -42,14 +42,14 @@ export function ContactForm() {
     setSuccess(false);
 
     try {
-      await axios.post("/userContact", datas);
+      await axios.post("/api/contato", datas);
 
       setSuccess(true);
 
       setNome("");
       setEmail("");
       setTelefone("");
-      setCurso("");
+      setServico("");
       setMensagem("");
 
       setTimeout(() => setSuccess(false), 3000);
@@ -74,7 +74,7 @@ export function ContactForm() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Fale com a Ar Studio</h2>
             <p className="text-xl">
-              Quer construir um sistema web, integrarar APIs ou melhorar sua
+              Quer construir um sistema web, integrar APIs ou melhorar sua
               presença online? Conte-nos sobre o seu projeto — retornamos em até
               24 horas úteis.
             </p>
@@ -145,25 +145,31 @@ export function ContactForm() {
                   <select
                     id="servico"
                     name="servico"
-                    value={curso}
+                    value={servico}
                     className="w-full px-4 py-3 dark:bg-dark-card border border-gray-300 rounded-lg "
                     onChange={(e: ChangeEvent<HTMLSelectElement>) => {
-                      setCurso(e.target.value);
+                      setServico(e.target.value);
                     }}
                     required
                   >
                     <option value="" className="text- dark:text-[#E2DFD2]">
                       Selecione o serviço
                     </option>
-                    <option value="puncao">
-                      Desenvolvimento Web (React / Next.js)
+                    <option value="sistemas">
+                      Desenvolvimento Web (React / Next.js / Nest.js / Node)
                     </option>
-                    <option value="curativos">Design de Interface & UX</option>
-                    <option value="medicamentos">
-                      Administração de Medicamentos
+                    <option value="ecommerce">
+                      Desenvolvimento de e-commerce (Shopify / WooCommerce)
                     </option>
-                    <option value="fundamentos">
-                      Fundamentos e Cuidados Básicos
+                    <option value="landing">Criação de Landing Page</option>
+                    <option value="institucional">
+                      Criação de sites institucionais
+                    </option>
+                    <option value="apis">
+                      Desenvolvimento de APIs e Back-end
+                    </option>
+                    <option value="outros">
+                      Outros serviços (Descreva-os abaixo)
                     </option>
                   </select>
                 </div>
