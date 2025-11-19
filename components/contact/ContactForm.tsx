@@ -93,7 +93,7 @@ export function ContactForm() {
                     id="nome"
                     name="nome"
                     value={nome}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                     placeholder="Seu nome"
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       setNome(e.target.value);
@@ -111,7 +111,7 @@ export function ContactForm() {
                     id="email"
                     name="email"
                     value={email}
-                    className="w-full  px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full  px-4 py-3 border border-gray-300 rounded-lg "
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       setEmail(e.target.value);
                     }}
@@ -129,7 +129,7 @@ export function ContactForm() {
                     id="telefone"
                     name="telefone"
                     value={telefone}
-                    className="w-full  px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full  px-4 py-3 border border-gray-300 rounded-lg "
                     onChange={(e: ChangeEvent<HTMLInputElement>) => {
                       setTelefone(e.target.value);
                     }}
@@ -146,13 +146,15 @@ export function ContactForm() {
                     id="servico"
                     name="servico"
                     value={curso}
-                    className="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 dark:bg-dark-card border border-gray-300 rounded-lg "
                     onChange={(e: ChangeEvent<HTMLSelectElement>) => {
                       setCurso(e.target.value);
                     }}
                     required
                   >
-                    <option value="">Selecione o serviço</option>
+                    <option value="" className="text- dark:text-[#E2DFD2]">
+                      Selecione o serviço
+                    </option>
                     <option value="puncao">
                       Desenvolvimento Web (React / Next.js)
                     </option>
@@ -168,14 +170,14 @@ export function ContactForm() {
 
                 <div>
                   <label htmlFor="mensagem" className="block font-medium mb-2">
-                    Mensagem (opcional)
+                    Mensagem
                   </label>
                   <textarea
                     id="mensagem"
                     name="mensagem"
                     rows={4}
                     value={mensagem}
-                    className="w-full  px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg "
                     onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
                       setMensagem(e.target.value);
                     }}
@@ -208,7 +210,7 @@ export function ContactForm() {
             {/* Informações de Contato */}
             <div className="space-y-6">
               <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6">
+                <h3 className="text-2xl font-bold mb-6">
                   Outras Formas de Contato
                 </h3>
               </div>
@@ -218,60 +220,52 @@ export function ContactForm() {
                 href="https://wa.me/5571999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start p-6 bg-green-50 rounded-lg hover:bg-green-100 transition group"
+                className="flex items-start p-6 whatsapp rounded-lg transition group"
               >
                 <div className="text-3xl mr-4">💬</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1 group-hover:text-green-600">
+                  <h4 className="font-semibold mb-1 group-hover:text-green-600">
                     WhatsApp
                   </h4>
                   <p className="">(71) 99999-9999</p>
-                  <p className="text-sm text-gray-500 mt-1">
+                  <p className="text-sm  mt-1">
                     Clique para conversar diretamente
                   </p>
                 </div>
               </a>
 
               {/* E-mail */}
-              <div className="flex items-start p-6 bg-blue-50 rounded-lg">
+              <div className="flex items-start p-6 rounded-lg email">
                 <div className="text-3xl mr-4">📧</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">E-mail</h4>
+                  <h4 className="font-semibold mb-1">E-mail</h4>
                   <a
                     href="mailto:contato@exemplo.com"
                     className="text-blue-600 hover:underline"
                   >
                     contato@exemplo.com
                   </a>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Respondemos em até 24h
-                  </p>
+                  <p className="text-sm mt-1">Respondemos em até 24h</p>
                 </div>
               </div>
 
               {/* Localização */}
-              <div className="flex items-start p-6 bg-gray-50 rounded-lg">
+              <div className="flex items-start p-6 rounded-lg contact-card">
                 <div className="text-3xl mr-4">📍</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">
-                    Localização
-                  </h4>
+                  <h4 className="font-semibold mb-1">Localização</h4>
                   <p className="">Salvador, Bahia</p>
-                  <p className="text-sm text-gray-500 mt-1">
-                    Cursos presenciais na região
-                  </p>
+                  <p className="text-sm mt-1">Cursos presenciais na região</p>
                 </div>
               </div>
 
               {/* Horário */}
-              <div className="flex items-start p-6 bg-gray-50 rounded-lg">
+              <div className="flex items-start p-6  rounded-lg contact-card">
                 <div className="text-3xl mr-4">⏰</div>
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-1">
-                    Horário de Atendimento
-                  </h4>
-                  <p className="text-gray-600">Segunda a Sexta: 9h às 18h</p>
-                  <p className="text-gray-600">Sábados: 9h às 13h</p>
+                  <h4 className="font-semibold mb-1">Horário de Atendimento</h4>
+                  <p className="text-">Segunda a Sexta: 9h às 18h</p>
+                  <p className="text-">Sábados: 9h às 13h</p>
                 </div>
               </div>
             </div>

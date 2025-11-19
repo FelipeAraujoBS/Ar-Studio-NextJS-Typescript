@@ -110,6 +110,15 @@
   .contactform-scope h2 {
     @apply text-gray-800 dark:text-white;
   }
+
+  .contactform-scope h3 {
+    @apply text-gray-800 dark:text-white;
+  }
+
+  .contactform-scope h4 {
+    @apply text-gray-800 dark:text-white;
+  }
+
   .contactform-scope p {
     @apply text-gray-600 dark:text-white;
   }
@@ -120,6 +129,23 @@
   .contactform-scope textarea,
   .contactform-scope select {
     @apply text-gray-600 dark:text-[#E2DFD2];
+
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+    @apply dark:focus:ring-2 dark:focus:ring-accent-cyan;
+
+    @apply outline-none;
+  }
+
+  .whatsapp {
+    @apply bg-green-50 hover:bg-green-100 dark:bg-[#355E3B]/50 dark:hover:bg-[#355E3B];
+  }
+
+  .email {
+    @apply bg-blue-50 hover:bg-blue-100 dark:bg-dark-card;
+  }
+
+  .contact-card {
+    @apply bg-gray-50 dark:bg-dark-card;
   }
 }
 
