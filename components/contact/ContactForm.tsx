@@ -261,7 +261,7 @@ export function ContactForm() {
                 <div>
                   <h4 className="font-semibold mb-1">Localização</h4>
                   <p className="">Salvador, Bahia</p>
-                  <p className="text-sm mt-1">Cursos presenciais na região</p>
+                  <p className="text-sm mt-1">Reuniões presenciais na região</p>
                 </div>
               </div>
 

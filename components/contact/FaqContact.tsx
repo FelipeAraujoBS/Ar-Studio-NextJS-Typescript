@@ -9,34 +9,44 @@ export function FaqContact() {
 
   const faqs = [
     {
-      pergunta: "Como funciona a inscrição nos cursos?",
+      pergunta: "Como funciona o processo de contratação dos serviços?",
       resposta:
-        "Entre em contato pelo WhatsApp ou pelo formulário de contato. Confirme a data da turma desejada e faça o pagamento para garantir sua vaga. Enviaremos todas as informações sobre local, horário e materiais necessários.",
+        "Você preenche o formulário de contato ou envia uma mensagem pelo WhatsApp. Em até 24 horas úteis retornamos com uma análise inicial do projeto e, se necessário, marcamos uma reunião para alinhar requisitos, prazos e valores.",
     },
     {
-      pergunta: "Preciso ter experiência prévia em enfermagem?",
+      pergunta: "Quais tipos de projetos vocês desenvolvem?",
       resposta:
-        "Os cursos são voltados principalmente para estudantes de enfermagem e técnicos que desejam aprimorar suas habilidades práticas. Recomendamos conhecimento teórico básico, mas a prática será ensinada desde o início.",
+        "Desenvolvemos sistemas web completos, sites profissionais, e-commerces, landing pages, APIs e integrações personalizadas. Trabalhamos com tecnologias modernas como React, Next.js, Node, Nest.js e muito mais.",
     },
     {
-      pergunta: "Os cursos fornecem certificado?",
+      pergunta: "A Ar Studio cria sites personalizados ou usa templates?",
       resposta:
-        "Sim! Todos os participantes que completarem o curso receberão um certificado de participação, que pode ser incluído em seu currículo profissional.",
+        "Criamos layouts totalmente personalizados, otimizados para velocidade, SEO e conversão. Também podemos trabalhar com templates caso o cliente deseje uma solução mais rápida ou econômica.",
     },
     {
-      pergunta: "Qual a duração de cada curso?",
+      pergunta: "Quanto custa para desenvolver um site ou sistema?",
       resposta:
-        "Cada curso tem duração de aproximadamente 8 horas, realizados aos sábados ou domingos. O formato intensivo permite prática supervisionada com foco total no aprendizado.",
+        "O valor depende do tipo de projeto, funcionalidades, integrações e prazo. Após entendermos sua necessidade, enviamos um orçamento detalhado. Não trabalhamos com valores fixos porque cada projeto é único.",
     },
     {
-      pergunta: "Posso parcelar o pagamento?",
+      pergunta: "Vocês oferecem manutenção após entregar o projeto?",
       resposta:
-        "Entre em contato conosco para consultar as opções de pagamento disponíveis. Trabalhamos com diferentes formas de pagamento para facilitar sua participação.",
+        "Sim! Oferecemos planos de manutenção, atualizações, otimização de performance e suporte contínuo. Também é possível contratar horas avulsas de manutenção conforme a necessidade.",
     },
     {
-      pergunta: "Onde acontecem os cursos presenciais?",
+      pergunta: "Quanto tempo leva para um site ficar pronto?",
       resposta:
-        "Os cursos são realizados em Salvador, Bahia. O endereço exato será informado no momento da inscrição. Trabalhamos com espaços equipados e adequados para a prática das técnicas de enfermagem.",
+        "Depende do escopo. Landing pages podem ficar prontas entre 3 e 7 dias. Sites institucionais levam de 1 a 3 semanas. Sistemas mais complexos variam de 30 a 90 dias, dependendo das funcionalidades.",
+    },
+    {
+      pergunta: "Vocês desenvolvem lojas virtuais completas?",
+      resposta:
+        "Sim! Criamos e-commerces usando Shopify ou WooCommerce, configuramos meios de pagamento, produtos, frete e toda a parte visual. Também podemos integrar APIs, ERPs e funcionalidades extras.",
+    },
+    {
+      pergunta: "Vocês trabalham com integrações e APIs?",
+      resposta:
+        "Trabalhamos com desenvolvimento de APIs, microserviços e integrações com serviços externos, como sistemas de pagamento, CRMs, plataformas de automação e bancos de dados.",
     },
   ];
 
@@ -53,7 +63,7 @@ export function FaqContact() {
             Perguntas Frequentes
           </h2>
           <p className="text-xl text-gray-600 dark:text-dark-text max-w-2xl mx-auto">
-            Tire suas dúvidas sobre nossos cursos
+            Tire suas dúvidas sobre nossos serviços
           </p>
         </div>
 
