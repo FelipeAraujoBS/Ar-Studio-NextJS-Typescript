@@ -1,3 +1,7 @@
+> **Nota**: Este é um projeto freelance que desenvolvi para praticar minhas 
+> habilidades full-stack enquanto busco minha primeira oportunidade como 
+> desenvolvedor. Demonstra capacidade de criar soluções completas do zero.
+
 # 🎨 Ar Studio - Website Institucional
 
 Site institucional e portfólio da **Ar Studio**, empresa especializada em desenvolvimento de sistemas web modernos. Construído com Next.js 14, TypeScript e focado em performance e experiência do usuário.
