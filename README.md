@@ -1,112 +1,131 @@
-# Ar-Studio
+# 🎨 Ar Studio - Website Institucional
 
-## 🎯 Visão Geral
+Site institucional e portfólio da **Ar Studio**, empresa especializada em desenvolvimento de sistemas web modernos. Construído com Next.js 14, TypeScript e focado em performance e experiência do usuário.
 
-[a-group] é uma aplicação web construída com Next.js e TypeScript, cuja finalidade é **(adicione aqui a descrição: ex: gerenciar grupos de trabalho, organizar projetos colaborativos, etc.)**.  
-O foco deste projeto é demonstrar habilidades de full-stack moderno (frontend + backend) e arquitetura web escalável.
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
+![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
 
-## 🧰 Tecnologias Utilizadas
+## 📋 Sobre o Projeto
 
-- Next.js (app router)
-- TypeScript
-- (adicione backend se houver: API, banco de dados, etc)
-- CSS / (ou Tailwind / styled-components conforme usado)
-- Outras libs: (adicione se usar: Axios, Zustand, SWR, etc)
-- Ferramentas de Dev: ESLint, Prettier, etc
+Este é o site oficial da Ar Studio, desenvolvido para apresentar os serviços da empresa, mostrar o portfólio de projetos e facilitar o contato com potenciais clientes. O projeto demonstra habilidades full-stack modernas com Next.js, incluindo server-side rendering, API routes e integração com serviços externos.
 
-## 🚀 Funcionalidades Principais
+### ✨ Funcionalidades
 
-- [x] Página inicial com listagem de grupos/projetos
-- [x] Criação, edição e exclusão de grupos (CRUD)
-- [x] Autenticação / autorização (se aplicável)
-- [x] Responsivo para dispositivos móveis
-- [x] Deploy automático (ex: Vercel)
-- (adicione outras funcionalidades específicas)
+- **🏢 Página Institucional**: História, missão e visão da Ar Studio
+- **💼 Portfólio Interativo**: Showcase de projetos realizados com detalhes técnicos
+- **⭐ Depoimentos**: Avaliações e feedbacks de clientes anteriores
+- **📧 Formulário de Contato**: Integração com Resend para envio automático de emails
+- **📱 Design Responsivo**: Otimizado para desktop, tablet e mobile
+- **⚡ Performance**: SSR e otimizações do Next.js para carregamento rápido
 
-## 📂 Estrutura do Projeto
+## 🚀 Tecnologias Utilizadas
 
-/app – lógica de páginas e roteamento
-/components – componentes reutilizáveis
-/config – configurações do projeto
-/lib – utilitários/helpers
-/public – assets públicos (ícones, imagens)
-/styles – estilos globais ou tema
-/types – definições de TypeScript
+### Frontend
+- **Next.js 14** (App Router)
+- **TypeScript**
+- **React 18**
+- **Tailwind CSS** *(ou sua biblioteca de estilo)*
+- Animações e transições suaves
 
-## 🧪 Instalação e Execução Local
+### Backend/API
+- **Next.js API Routes**
+- **Resend** - Serviço de envio de emails
+- Validação de formulários server-side
+
+### Ferramentas de Desenvolvimento
+- ESLint
+- Prettier
+- Git & GitHub
+
+## 📁 Estrutura do Projeto
+
+```
+/app
+  ├── api/          # API routes (envio de email)
+  ├── (pages)/      # Páginas da aplicação
+  └── layout.tsx    # Layout principal
+/components         # Componentes React reutilizáveis
+/lib               # Utilitários e configurações
+/public            # Assets estáticos (imagens, ícones)
+/types             # Definições TypeScript
+```
+
+## 💻 Como Rodar Localmente
+
+### Pré-requisitos
+- Node.js 18+ instalado
+- npm ou yarn
+
+### Instalação
 
 1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/FelipeAraujoBS/a-group.git
-   cd a-group
-
-   ```
+```bash
+git clone https://github.com/FelipeAraujoBS/Ar-Studio-NextJS-Typescript.git
+cd Ar-Studio-NextJS-Typescript
+```
 
 2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+```
 
-   npm install
+3. Configure as variáveis de ambiente:
+```bash
+# Crie um arquivo .env.local na raiz do projeto
+RESEND_API_KEY=sua_chave_aqui
+CONTACT_EMAIL=seu_email@exemplo.com
+```
 
-   ou
+4. Execute o servidor de desenvolvimento:
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-   yarn
+5. Abra [http://localhost:3000](http://localhost:3000) no navegador
 
-3. Execute no modo de desenvolvimento:
+## 🌐 Deploy
 
-   npm run dev
+O projeto está configurado para deploy na **Vercel** com CI/CD automático.
 
-   ou
+**Status**: 🚧 Em breve no ar
 
-   yarn dev
+> Deploy planejado para os próximos dias após ajustes finais
 
-4. Abra http://localhost:3000 no navegador.
+## 🎯 Destaques Técnicos
 
-🛠️ Deploy
+- ✅ **Server-Side Rendering (SSR)** para melhor SEO
+- ✅ **API Routes** do Next.js para backend serverless
+- ✅ **TypeScript** para type safety e melhor DX
+- ✅ **Componentes modulares** e reutilizáveis
+- ✅ **Validação robusta** de formulários
+- ✅ **Responsividade** em todos os dispositivos
+- ✅ **Performance otimizada** com lazy loading e code splitting
 
-O projeto está configurado para deploy com Vercel (ou outro serviço). Basta conectar o repositório e o CI/CD automática iniciará após cada commit para a branch main.
+## 📧 Funcionalidade de Email
 
-✅ Como contribuir
+O formulário de contato utiliza:
+- **Resend API** para envio confiável de emails
+- Validação server-side dos dados
+- Feedback visual para o usuário
+- Rate limiting para prevenir spam
 
-1. Faça o fork do projeto.
+## 👤 Autor
 
-2. Crie uma branch para sua feature: git checkout -b feature/nome-da-feature
+**Felipe de Araújo**  
+Desenvolvedor Full-Stack | Fundador da Ar Studio
 
-3. Commit suas mudanças: git commit -m "feat: descrição da feature"
+- LinkedIn: [felipe-de-araujo-b87386231](https://www.linkedin.com/in/felipe-de-araujo-b87386231/)
+- GitHub: [@FelipeAraujoBS](https://github.com/FelipeAraujoBS)
 
-4. Envie para o repositório remoto: git push origin feature/nome-da-feature
+## 📝 Licença
 
-5. Abra um Pull Request e descreva sua mudança.
+Este projeto está sob a licença MIT.
 
-📝 Melhores Práticas e Testes
+---
 
--Uso de ESLint + Prettier para manter o código limpo e consistente.
-
--(Se aplicável) Incluído testes unitários e de integração.
-
--(Se aplicável) Coverage de testes com relatório.
-
--Componentização clara e modular para facilitar manutenção.
-
-🧭 Próximos Passos / Roadmap
-
--Integração de API de backend para persistência de dados (ex: PostgreSQL + Prisma)
-
--Autenticação com JWT ou OAuth
-
--Integração com sistema de notificações em tempo real (WebSockets)
-
--Versão mobile-first ou PWA
-
--Dashboard de analytics com gráficos
-
-📄 Licença
-
-Este projeto está licenciado sob a licença MIT — veja o arquivo LICENSE para mais detalhes.
-
-👤 Autor
-
-Felipe de Araújo
-
-Linkedin: https://www.linkedin.com/in/felipe-de-araujo-b87386231/
-
-Github: https://github.com/FelipeAraujoBS
+⭐ Se você gostou deste projeto, considere dar uma estrela no repositório!
